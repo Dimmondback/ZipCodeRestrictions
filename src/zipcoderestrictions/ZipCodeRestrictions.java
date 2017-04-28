@@ -57,10 +57,10 @@ public class ZipCodeRestrictions {
         System.out.println("Test2...");
         test(restricted, false); // Additional zip codes added.
 
-        restricted.clear();
-        restricted.add(new int[]{94030, 94051});
+        List<int[]> newRestricted = new ArrayList<>();
+        newRestricted.add(new int[]{94030, 94051});
         
         System.out.println("Test3...");
-        test(restricted, true); // Reset restricted zip codes.
+        test(newRestricted, true); // Reset restricted zip codes.
     }
 }
