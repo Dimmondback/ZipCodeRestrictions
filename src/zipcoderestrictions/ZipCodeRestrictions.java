@@ -23,7 +23,7 @@ public class ZipCodeRestrictions {
         }
 
         for (int[] current : restricted) {
-            for (int i = current[0]; i <= current[1]; i++) {
+            for (int i = current[0]; i <= current[1]; i++) { // Treat it like counting-sort and mark places that can't be sent to.
                 zipcodeList[i] = 1;
             }
         }
