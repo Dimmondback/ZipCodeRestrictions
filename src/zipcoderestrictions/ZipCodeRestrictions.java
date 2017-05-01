@@ -54,11 +54,6 @@ public class ZipCodeRestrictions {
             }
         }
         
-        for(int i = 0; i < restrictedZipCodes.size(); i++) {
-            System.out.print(restrictedZipCodes.get(i)[0] + ", ");
-            System.out.println(restrictedZipCodes.get(i)[1]);
-        }
-
         return restrictedZipCodes;
     }
     
@@ -105,7 +100,10 @@ public class ZipCodeRestrictions {
         restricted.add(new int[]{94045, 95000});
         restricted.add(new int[]{30210, 30210});
         restricted.add(new int[]{13579, 24680});
-
-        restrictedZipCodes(restricted, false);
+        List<int[]> restrictedZipCodes = restrictedZipCodes(restricted, false);
+        for(int i = 0; i < restrictedZipCodes.size(); i++) {
+            System.out.print(restrictedZipCodes.get(i)[0] + ", ");
+            System.out.println(restrictedZipCodes.get(i)[1]);
+        }
     }
-}
+
